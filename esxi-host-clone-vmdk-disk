@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+mkdir "/vmfs/volumes/OS1/Ubuntu1804-2/"
+vmkfstools -i "/vmfs/volumes/OS1/Ubuntu1804/Ubuntu1804.vmdk" "/vmfs/volumes/OS1/Ubuntu1804-2/Ubuntu1804-2.vmdk" -d thin
+
+# In ESXi GUI, create a new VM and attach the disk you just created
