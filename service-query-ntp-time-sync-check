@@ -1,0 +1,3 @@
+$VIServer = "vcenter1.lab.local"
+Connect-VIServer $VIServer -AllLinked
+foreach ($esx in (get-vmhost)) {$esx.Name + " -> " + (get-view $esx.ExtensionData.ConfigManager.DateTimeSystem).QueryDateTime().ToLocalTime()}
