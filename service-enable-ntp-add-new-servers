@@ -1,0 +1,2 @@
+$vmhosts = get-content C:\scripts\hosts.txt
+Add-VMHostNtpServer -NtpServer NewIPaddress1, NewIPaddress2 -VMHost $vmhosts
