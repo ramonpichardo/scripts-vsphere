@@ -1,0 +1,2 @@
+$vmhosts = get-content C:\scripts\hosts.txt
+Remove-VMHostNtpServer -NtpServer IPaddress1, IPaddress2 -VMHost $vmhosts –confirm
