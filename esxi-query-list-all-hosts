@@ -1,0 +1,4 @@
+# List each ESXi host name, OS version and build
+$VIServer = "vcenter1.lab.local"
+Connect-VIServer $VIServer -AllLinked
+Get-VMHost | Select Name,Version,Build | Out-File –FilePath C:\temp\VMhosts.txt
